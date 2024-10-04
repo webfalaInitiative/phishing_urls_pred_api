@@ -1,10 +1,9 @@
 # app.py
 from fastapi import FastAPI
 from pydantic import BaseModel
+from utils import preprocess_url
 from sentence_transformers import SentenceTransformer
 import numpy as np
-from sklearn.preprocessing import LabelEncoder
-from sklearn.linear_model import LogisticRegression
 import joblib
 
 # Initialize the FastAPI app
@@ -23,10 +22,6 @@ class PredictionOutput(BaseModel):
     predicted_label: str
     confidence_score: float
 
-# Preprocessing function (if applicable)
-def preprocess_url(url):
-    # Example preprocessing - customize this as needed
-    return url.strip().lower()
 
 # Prediction logic with thresholds
 def predict_url_with_threshold(url, model, classifier, label_encoder):
@@ -50,7 +45,7 @@ def predict_url_with_threshold(url, model, classifier, label_encoder):
 
     # Define your class-specific confidence thresholds
     bad_link_threshold = 80.0
-    good_link_threshold = 60.0
+    good_link_threshold = 70.0
 
     # Apply the thresholds
     if predicted_label == 'bad' and confidence_score >= bad_link_threshold:
