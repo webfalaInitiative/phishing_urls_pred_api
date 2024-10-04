@@ -12,8 +12,8 @@ app = FastAPI()
 
 # Load the trained model and label encoder
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
-classifier = joblib.load('model/phishing_classifier_20240927_013119.pkl')
-label_encoder = joblib.load('model/label_encoder_20240927_013119.pkl')
+classifier = joblib.load('./model/phishing_classifier_20240927_013119.pkl')
+label_encoder = joblib.load('./model/label_encoder_20240927_013119.pkl')
 
 # Define input and output schemas
 class URLInput(BaseModel):
