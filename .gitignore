@@ -23,11 +23,12 @@ logs/
 *.py[cod]
 
 # Model artifacts
-models/
-*.joblib
-*.pkl
-*.h5
-*.ckpt
+# Add model artifacts to get for now
+# models/
+# *.joblib
+# *.pkl
+# *.h5
+# *.ckpt
 
 # FastAPI-related temporary files
 *.pid
