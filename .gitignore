@@ -1,0 +1,56 @@
+# Python virtual environment
+venv/
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+*.pdb
+.Python
+
+# OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Environment variables
+.env
+
+# Logs
+*.log
+logs/
+
+# Byte-compiled / optimized / DLL files
+*.py[cod]
+
+# Model artifacts
+models/
+*.joblib
+*.pkl
+*.h5
+*.ckpt
+
+# FastAPI-related temporary files
+*.pid
+*.seed
+*.pid.lock
+
+# Docker files (if using Docker)
+*.tar.gz
+docker-compose.override.yml
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Data files (exclude raw datasets or local storage)
+data/
+datasets/
+*.csv
+*.json
+*.xlsx
+
+# Jupyter notebook checkpoints (if used for experiments)
+.ipynb_checkpoints/
+
+# Render deployment specific (optional)
+render.yaml
