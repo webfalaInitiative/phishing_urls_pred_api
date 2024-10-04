@@ -49,7 +49,7 @@ def predict_url_with_threshold(url, model, classifier, label_encoder):
     predicted_label = label_encoder.inverse_transform([prediction])[0]
 
     # Define your class-specific confidence thresholds
-    bad_link_threshold = 95.0
+    bad_link_threshold = 80.0
     good_link_threshold = 70.0
 
     # Apply the thresholds
